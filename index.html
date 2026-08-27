@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MINDTUBE — De tu guion a un video montado</title>
+<meta name="description" content="MINDTUBE convierte tu guion en un borrador de CapCut montado: escenas, audios, prompts de imagen y edición. Corre en tu PC.">
+<style>
+  :root{
+    --negro:#0a0a0c; --negro2:#131317; --negro3:#1c1c22;
+    --rojo:#e11d2f; --amarillo:#ffcc00; --gris:#8b8b96;
+    --blanco:#f4f4f6; --borde:#26262e;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--negro); color:var(--blanco);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.6;
+  }
+  .envoltura{max-width:760px; margin:0 auto; padding:0 22px}
+
+  header{padding:26px 0}
+  .marca{font-size:22px; font-weight:800; letter-spacing:.5px}
+  .marca span{color:var(--rojo)}
+
+  .heroe{padding:40px 0 54px; text-align:center}
+  .heroe h1{
+    font-size:clamp(30px,6vw,50px); line-height:1.12; margin:0 0 18px; font-weight:800;
+  }
+  .heroe h1 em{color:var(--amarillo); font-style:normal}
+  .heroe p.entrada{
+    font-size:clamp(16px,2.4vw,19px); color:var(--gris);
+    max-width:560px; margin:0 auto 34px;
+  }
+
+  .descarga{
+    display:inline-flex; align-items:center; gap:12px;
+    background:var(--amarillo); color:#1a1200;
+    font-size:19px; font-weight:800; text-decoration:none;
+    padding:18px 38px; border-radius:14px;
+    transition:transform .12s ease, background .12s ease;
+  }
+  .descarga:hover{background:#ffd633; transform:translateY(-2px)}
+  .bajo-boton{margin-top:14px; font-size:13.5px; color:var(--gris)}
+
+  section{padding:40px 0; border-top:1px solid var(--borde)}
+  h2{font-size:13px; text-transform:uppercase; letter-spacing:1.1px; color:var(--amarillo); margin:0 0 22px}
+
+  .pasos{display:grid; gap:16px}
+  .paso{
+    display:flex; gap:16px; align-items:flex-start;
+    background:var(--negro2); border:1px solid var(--borde);
+    border-radius:12px; padding:18px 20px;
+  }
+  .paso .num{
+    flex:0 0 30px; height:30px; border-radius:50%;
+    background:var(--rojo); color:#fff; font-weight:800;
+    display:flex; align-items:center; justify-content:center; font-size:14px;
+  }
+  .paso h3{margin:0 0 4px; font-size:16px}
+  .paso p{margin:0; color:var(--gris); font-size:14.5px}
+  .paso code{
+    background:var(--negro3); padding:2px 7px; border-radius:5px;
+    font-size:13px; color:var(--blanco);
+  }
+
+  .lista{list-style:none; padding:0; margin:0; display:grid; gap:12px}
+  .lista li{
+    background:var(--negro2); border:1px solid var(--borde);
+    border-radius:12px; padding:15px 18px; font-size:14.5px;
+  }
+  .lista b{display:block; margin-bottom:2px}
+  .lista span{color:var(--gris)}
+  .etiqueta{
+    font-size:11px; padding:2px 9px; border-radius:20px; margin-left:8px;
+    background:#2a1114; border:1px solid #5d1b22; color:#ffb3bb;
+    text-transform:uppercase; letter-spacing:.5px;
+  }
+  .etiqueta.suave{background:#12210f; border-color:#2f5423; color:#b5e8a0}
+
+  .nota{
+    background:var(--negro2); border:1px solid var(--borde);
+    border-left:3px solid var(--amarillo);
+    border-radius:10px; padding:16px 18px; font-size:14.5px; color:var(--gris);
+  }
+  .nota b{color:var(--blanco)}
+
+  footer{
+    padding:34px 0 50px; text-align:center;
+    color:var(--gris); font-size:13.5px; border-top:1px solid var(--borde);
+  }
+  footer a{color:var(--amarillo)}
+</style>
+</head>
+<body>
+
+<div class="envoltura">
+
+  <header>
+    <div class="marca">MIND<span>TUBE</span></div>
+  </header>
+
+  <div class="heroe">
+    <h1>De tu guion a un video <em>montado en CapCut</em>.</h1>
+    <p class="entrada">
+      MINDTUBE parte el guion en escenas, genera la voz de cada una, escribe los
+      prompts de tus imágenes y te deja el borrador armado en CapCut.
+      Todo corre en tu computadora.
+    </p>
+
+    <a class="descarga" href="https://github.com/thaliaruizmc/mindtube-IA/releases/latest/download/MINDTUBE-windows.zip">
+      ⬇ Descargar para Windows
+    </a>
+    <p class="bajo-boton">
+      11 MB · Windows 10 o superior · no necesitas instalar Python ni nada más
+    </p>
+  </div>
+
+  <section>
+    <h2>Cómo se abre</h2>
+    <div class="pasos">
+      <div class="paso">
+        <div class="num">1</div>
+        <div>
+          <h3>Descomprime el ZIP</h3>
+          <p>Clic derecho sobre el archivo descargado → <b>Extraer todo…</b> y
+            guárdalo en una carpeta normal, como Documentos o el Escritorio.
+            No lo abras desde dentro del ZIP: no va a funcionar.</p>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="num">2</div>
+        <div>
+          <h3>Doble clic en <code>MINDTUBE.bat</code></h3>
+          <p>Se abre una ventana negra y, detrás, el panel en tu navegador.
+            Deja la ventana negra abierta mientras trabajas: cerrarla es como
+            apagar el programa.</p>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="num">3</div>
+        <div>
+          <h3>Entra con tu correo</h3>
+          <p>Escribe el mismo correo con el que pediste el acceso. Se comprueba
+            una vez y ya no te lo vuelve a pedir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Si Windows te avisa</h2>
+    <p class="nota">
+      La primera vez, Windows puede decir <b>«Windows protegió tu PC»</b>.
+      Es lo normal con programas que no pasan por su tienda. Haz clic en
+      <b>Más información</b> y después en <b>Ejecutar de todas formas</b>.
+      MINDTUBE no se conecta a ningún sitio salvo a los servicios que tú
+      configures: tu guion, tus audios y tus imágenes no salen de tu PC.
+    </p>
+  </section>
+
+  <footer>
+    Hecho por Thalia Ruiz · ¿Algo no funciona?
+    <a href="mailto:thaliahuaca1@gmail.com">Escríbeme</a>
+  </footer>
+
+</div>
+</body>
+</html>
